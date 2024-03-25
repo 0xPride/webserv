@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJFILES)
 	@mkdir -p build
-	$(CXX) $(CXXFLAGS) $(OBJFILES) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -static $(OBJFILES) -o $(NAME)
 
 debug: CXXFLAGS += -ggdb
 debug: $(NAME)
