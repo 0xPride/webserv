@@ -32,10 +32,10 @@ make
 3. create a config file
 
 ```
-default example.com:1337 {
+default test.com:1337 {
   route / {
     methods GET;
-    root /usr/share/webserv/;
+    root ./static/;
     index index.html;
   }
 }
