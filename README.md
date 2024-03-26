@@ -50,4 +50,3 @@ the syntax is inspired by caddy server config file
 ```
 
 5. hit the server by curl or a browser
->>>>>>> Stashed changes
