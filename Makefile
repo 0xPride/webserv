@@ -1,4 +1,4 @@
-NAME=webserv
+NAME=http
 CXX=g++
 CXXFLAGS+=-Wall -Wextra -Wreorder -std=c++98 -I . -flto -O3
 
