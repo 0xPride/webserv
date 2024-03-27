@@ -1,6 +1,6 @@
 NAME=http
 CXX=g++
-CXXFLAGS+=-Wall -Wextra -Wreorder -std=c++98 -I . -flto -O3
+CXXFLAGS+=-Wall -Wextra -Wreorder -std=c++98 -I . -O3
 
 CORE=core/main.cpp core/Sanitizer.cpp core/Multiplexer.cpp \
 		 core/Initialization.cpp core/Logger.cpp \
@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJFILES)
 	@mkdir -p build
-	$(CXX) $(CXXFLAGS) -static $(OBJFILES) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJFILES) -o $(NAME)
 
 debug: CXXFLAGS += -ggdb
 debug: $(NAME)
