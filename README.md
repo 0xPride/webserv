@@ -48,3 +48,33 @@ the syntax is inspired by caddy server config file
 ```sh
 ./http config_file
 ```
+
+### Serving a static website
+
+we need a example of static website you can use any one you prefer for demonstration i will be using this repo as an example
+
+```sh
+git clone https://github.com/YaninaTrekhleb/restaurant-website.git website
+```
+
+Lets add a config to server this website
+
+```
+default website.com:1337 {
+  route / {
+    methods GET POST;
+    root ./website/;
+    index index.html;
+  }
+}
+```
+
+save this in a file i will be saving it in a file called website.conf
+
+make sure that root directive points exactly where the folder of the repo you cloned
+
+now server the webstie
+
+```sh
+./http website.conf
+```
