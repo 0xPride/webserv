@@ -52,13 +52,13 @@ the syntax is inspired by Caddy server config file
 
 ### Serving a static website
 
-we need an example of a static website you can use anyone you prefer for demonstration i will be using this repo as an example
+0. we need an example of a static website you can use anyone you prefer for demonstration i will be using this repo as an example
 
 ```sh
 git clone https://github.com/YaninaTrekhleb/restaurant-website.git website
 ```
 
-Let's add a config to server this website
+1. let's add a config to server this website
 
 ```
 default website.com:1337 {
@@ -74,7 +74,7 @@ save this in a file i will be saving it in a file called website.conf
 
 make sure that the root directive points exactly where the folder of the repo you cloned
 
-now server the website
+2. now serve the website
 
 ```sh
 ./http website.conf
@@ -84,8 +84,8 @@ now server the website
 
 in this example, I will use WordPress as an example
 
-1. download WordPress from their website
-2. configure a server
+0. download WordPress from their website
+1. configure a server
 
 ```
 default example.com:1337 {
@@ -100,10 +100,12 @@ default example.com:1337 {
 
 - make sure that the root points exactly to where you put WordPress
 - make sure that php cgi is installed and write its path in the CGI
-directive an easy way to find its path is by running
+
+2. directive an easy way to find its path is by running
+
 ```sh
 which php-cgi
 ```
 
-if you open the browser and go to `localhost:1337`
+3. if you open the browser and go to `localhost:1337`
 WordPress should be served
