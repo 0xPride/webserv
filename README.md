@@ -7,6 +7,7 @@ this project is a basic implementation of the HTTP 1.1 protocol that supports pi
 ### dependencies
 - Unix-compliant system
 - c++ compiler
+- make
 - php cgi ( optional )
 
 ### Instructions
