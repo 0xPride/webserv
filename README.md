@@ -1,6 +1,6 @@
 # http-1.1
 
-this project is a basic implementation of the HTTP 1.1 protocol that supports pipelining and uploading files using chunks or multipart data
+This project is an exploration of the HTTP protocol by building a custom HTTP server in C++98. It provides a hands-on experience in understanding the intricacies of web communication, allowing users to test the server with a browser. The project covers both mandatory and bonus features, emphasizing non-blocking operations, configuration files, and CGI support.
 
 ## Build Instructions
 
