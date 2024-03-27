@@ -78,3 +78,31 @@ now server the webstie
 ```sh
 ./http website.conf
 ```
+
+### Serving project with cgi (common gateway interface)
+
+in this example i will use wordpress as an example
+
+1. download wordpress from there website
+2. configure a server
+
+```
+default example.com:1337 {
+  route / {
+    methods GET POST;
+    root ./wordpress/;
+    index index.php;
+    cgi php /usr/bin/php-cgi;
+  }
+}
+```
+
+- make sure that the root points exactly to where you put wordpress
+- make sure that php cgi installed and write its path in the cgi
+directive an easy way of find it path is by running
+```sh
+which php-cgi
+```
+
+if you go to the browser and go to `localhost:1337`
+wordpress should be served
